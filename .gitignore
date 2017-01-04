@@ -1,7 +1,5 @@
-# Created by https://www.gitignore.io/api/ember
+# See https://help.github.com/ignore-files/ for more about ignoring files.
 
-### Ember ###
-# see https://github.com/ember-cli/ember-cli/blob/master/blueprints/app/files/gitignore
 # compiled output
 /dist
 /tmp
@@ -15,7 +13,5 @@
 /connect.lock
 /coverage/*
 /libpeerconnection.log
-npm-debug.log
+npm-debug.log*
 testem.log
-
-# End of https://www.gitignore.io/api/ember
