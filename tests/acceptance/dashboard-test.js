@@ -13,6 +13,7 @@ test('should redirect to dashboard route', function (assert) {
 test('should list entries meant to be listed on the dashboard', function (assert) {
   visit('/');
   andThen(function () {
-    assert.equal(find('.entry').length, 1, 'should see 1 entry');
+      assert.equal(find('.dashboard-entry').length, 1, 'should see 1 entry');
+      assert.equal(find('.dashboard-entry').text(), "First entry", 'should display entry text');
   });
 });
