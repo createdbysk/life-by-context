@@ -5,7 +5,13 @@ export default function() {
         type: "dashboards",
         id: "1",
         attributes: {
-            text: "First entry"            
+            text: "First entry"
+        }
+    }, {
+        type: "dashboards",
+        id: "2",
+        attributes: {
+            text: "Second entry"
         }
     }];
 
