@@ -1,21 +1,16 @@
 export default function() {
     this.namespace = '/api';
 
-    let entries = [{
-        type: "dashboards",
-        id: "1",
-        attributes: {
-            text: "First entry"
-        }
-    }, {
-        type: "dashboards",
-        id: "2",
-        attributes: {
-            text: "Second entry"
-        }
-    }];
-
-    this.get('/dashboards', function() {
+    this.get('/dashboards', ({dashboards}) => {
+        let entries = dashboards.all().models.map((entry) => {
+            return {
+                id: entry.id,
+                type: "dashboards",
+                attributes: {
+                    text: entry.text
+                }
+            };
+        });
         return {
             data: entries
         };
