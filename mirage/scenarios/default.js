@@ -5,7 +5,8 @@ export default function(server) {
 
     Make sure to define a factory for each model you want to create.
   */
-  server.loadFixtures('dashboards');
+  // server.loadFixtures('dashboards');
+  server.createList('dashboard', 2);
 
   // server.createList('post', 10);
 }
