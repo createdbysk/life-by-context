@@ -2,7 +2,9 @@
   <h1>Dashboard</h1>
   <ul class="dashboard-entries">
     {{#each model as |entry|}}
-        <li class="dashboard-entry">{{entry.text}}</li>
+        <li class="dashboard-entry">
+            {{dashboard-entry text=entry.text}}
+        </li>
     {{/each}}
   </ul>
 </div>

@@ -1,0 +1,8 @@
+{{#if isEditing}}
+    <input value={{text}} {{action "completeEdit" on="focusOut"}}>
+{{else}}
+    <label {{action "editEntry" on="doubleClick"}}>
+        {{text}}
+    </label>
+{{/if}}
+{{yield}}
