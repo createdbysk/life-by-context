@@ -1,5 +1,7 @@
 {{#if isEditing}}
-    <input value={{text}} {{action "completeEdit" on="focusOut"}}>
+    <form {{action "completeEdit" on="submit"}}>
+      {{input value=text focus-out="completeEdit"}}
+    </form>
 {{else}}
     <label {{action "editEntry" on="doubleClick"}}>
         {{text}}

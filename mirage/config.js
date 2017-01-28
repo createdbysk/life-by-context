@@ -15,6 +15,13 @@ export default function() {
             data: entries
         };
     });
+
+    this.put('/dashboards/:id', ({dashboards}, request) => {
+      let id = request.params.id;
+      let attrs = this.normalizedRequestAttrs();
+
+      return contacts.find(id).update(attrs);
+    });
 }
 
  // These comments are here to help you get started. Feel free to delete them.
