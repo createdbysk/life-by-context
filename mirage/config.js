@@ -16,12 +16,9 @@ export default function() {
         };
     });
 
-    this.put('/dashboards/:id', ({dashboards}, request) => {
-      let id = request.params.id;
-      let attrs = this.normalizedRequestAttrs();
+    this.get('/dashboards/:id');
 
-      return contacts.find(id).update(attrs);
-    });
+    this.patch('/dashboards/:id');
 }
 
  // These comments are here to help you get started. Feel free to delete them.

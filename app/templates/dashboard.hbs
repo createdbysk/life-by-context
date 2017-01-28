@@ -3,7 +3,7 @@
   <ul class="dashboard-entries">
     {{#each model as |entry|}}
         <li class="dashboard-entry">
-            {{dashboard-entry text=entry.text}}
+            {{dashboard-entry text=entry.text id=entry.id callback=(action "textChanged")}}
         </li>
     {{/each}}
   </ul>
